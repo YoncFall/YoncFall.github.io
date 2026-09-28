@@ -1,0 +1,184 @@
+/* YoncFALL — палитра совпадает с темой приложения */
+:root {
+  --bg: #0c0e13;
+  --bg2: #12151d;
+  --card: #181b25;
+  --card-hi: #21262f;
+  --line: #2e3444;
+  --text: #e6eaf2;
+  --dim: #7c869c;
+  --accent: #00d8ff;
+  --accent-2: #00f0a8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.6 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding: 0 20px 60px;
+}
+
+/* мягкое свечение сверху, как неон в шапке приложения */
+.glow {
+  position: fixed;
+  top: -220px; left: 50%;
+  width: 900px; height: 460px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(0,216,255,.13), transparent 68%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+header, .tabs, .content, footer { position: relative; z-index: 1; }
+
+header { text-align: center; padding: 64px 0 34px; }
+
+h1 {
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+h1 span { color: var(--accent); }
+
+.tagline { color: var(--dim); margin-top: 8px; font-size: 16px; }
+
+/* вкладки категорий */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.tab {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--dim);
+  padding: 9px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .15s;
+}
+.tab:hover { color: var(--text); border-color: #46536b; transform: translateY(-1px); }
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #04222a;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 22px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.loading, .empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--dim);
+  padding: 46px 0;
+}
+
+/* карточка софта */
+.app {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: .18s;
+}
+.app:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+.shot {
+  width: 100%;
+  display: block;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--line);
+}
+
+.body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+
+.app-name { font-size: 19px; font-weight: 700; margin-bottom: 6px; }
+
+.app-desc { color: var(--dim); font-size: 14px; margin-bottom: 16px; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+.chip {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  color: var(--dim);
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+.chip.accent { color: var(--accent-2); border-color: #1c4a3d; }
+
+.actions { margin-top: auto; display: flex; gap: 9px; }
+
+.btn {
+  flex: 1;
+  text-align: center;
+  padding: 11px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: .15s;
+}
+
+.btn-dl {
+  background: var(--accent);
+  color: #04222a;
+}
+.btn-dl:hover { background: #46ebff; }
+
+.btn-src {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--dim);
+  flex: 0 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.btn-src:hover { color: var(--text); border-color: #46536b; }
+
+/* дополнительные ссылки под кнопками: zip, все файлы релиза */
+.sublinks {
+  margin-top: 12px;
+  font-size: 13px;
+  text-align: center;
+}
+.sublinks a { color: var(--dim); text-decoration: none; }
+.sublinks a:hover { color: var(--accent); text-decoration: underline; }
+.dot { color: var(--line); margin: 0 8px; }
+
+.note {
+  font-size: 12px;
+  color: #6a7288;
+  margin-top: 10px;
+}
+
+footer {
+  max-width: 1120px;
+  margin: 56px auto 0;
+  text-align: center;
+  font-size: 14px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+.muted { color: var(--dim); margin-top: 8px; font-size: 13px; }

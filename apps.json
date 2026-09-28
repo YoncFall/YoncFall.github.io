@@ -1,0 +1,43 @@
+{
+  "site": {
+    "name": "YoncFALL",
+    "tagline": "Софт для Windows",
+    "description": "Открытый софт для Windows: VPN-лаунчер и утилиты.",
+    "links": {
+      "github": "https://github.com/YoncFall",
+      "telegram": ""
+    }
+  },
+  "categories": [
+    {
+      "id": "vpn",
+      "title": "VPN ЛАУНЧЕР",
+      "apps": [
+        {
+          "slug": "vpn-launcher",
+          "name": "VPN LAUNCHER BY @YoncFALL",
+          "tagline": "Графический лаунчер sing-box для Windows",
+          "description": "Один установщик setup.exe: проверяет, всё ли нужно на компьютере, и сам доставляет недостающее. Окно с собственной иконкой, без окна PowerShell. Подписки vless, vmess, trojan, shadowsocks, hysteria2, tuic. Два режима: весь трафик через TUN или только системный прокси, с исключениями для игр и античитов.",
+          "version": "1.0.5",
+          "license": "GPL-3.0",
+          "platform": "Windows 10+ x64",
+          "size": "26.5 MB",
+          "requiresAdmin": "Прав администратора для установки не нужно. Режим «Весь трафик (TUN)» запросит их только в момент подключения.",
+          "tags": [
+            "sing-box",
+            "TUN",
+            "игры",
+            "EAC",
+            "BattlEye"
+          ],
+          "screenshot": "assets/vpn-launcher.png",
+          "download": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest/download/VPN-LAUNCHER-Setup.exe",
+          "downloadZip": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest/download/VPN-LAUNCHER.zip",
+          "downloadLabel": "Скачать установщик",
+          "releasePage": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest",
+          "source": "https://github.com/YoncFall/VPN-LAUNCHER"
+        }
+      ]
+    }
+  ]
+}
