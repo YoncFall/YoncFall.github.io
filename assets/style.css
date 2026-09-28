@@ -106,44 +106,46 @@ h1 span { color: var(--accent); }
 .shot {
   display: block;
   width: 100%;
-  height: auto;
+  height: clamp(200px, 30vw, 270px);
+  object-fit: cover;
+  object-position: top center;
   background: var(--bg2);
   border-bottom: 1px solid var(--line);
 }
 
-.card-body { display: flex; flex-direction: column; padding: 18px; }
+.card-body { display: flex; flex-direction: column; padding: 15px 17px 16px; }
 
-.app-name { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+.app-name { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
 
-.tag { color: var(--dim); font-size: 15px; margin-bottom: 10px; }
+.tag { color: var(--dim); font-size: 14px; margin-bottom: 9px; }
 
-.desc { color: var(--dim); font-size: 14px; margin-bottom: 16px; }
+.desc { color: var(--dim); font-size: 13.5px; margin-bottom: 14px; }
 
 .meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 18px;
+  gap: 6px;
+  margin-bottom: 15px;
 }
 .chip {
   background: var(--bg2);
   border: 1px solid var(--line);
   color: var(--dim);
-  font-size: 12px;
-  padding: 3px 10px;
+  font-size: 11.5px;
+  padding: 2px 9px;
   border-radius: 6px;
 }
 .chip.accent { color: var(--accent-2); border-color: #1c4a3d; }
 
-.actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
+.actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
 
 .btn {
   display: inline-block;
   text-align: center;
-  padding: 12px 22px;
+  padding: 10px 18px;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   transition: .15s;
   border: 1px solid transparent;
@@ -151,8 +153,8 @@ h1 span { color: var(--accent); }
 .btn-primary {
   background: var(--accent);
   color: #04222a;
-  font-size: 15.5px;
-  padding: 13px 28px;
+  font-size: 14.5px;
+  padding: 11px 22px;
 }
 .btn-primary:hover { background: #46ebff; }
 .btn-outline {
@@ -162,14 +164,14 @@ h1 span { color: var(--accent); }
 }
 .btn-outline:hover { color: var(--text); border-color: #46536b; }
 
-.morelink { margin-top: 12px; font-size: 13px; }
+.morelink { margin-top: 10px; font-size: 12.5px; }
 .morelink a { color: var(--dim); text-decoration: none; }
 .morelink a:hover { color: var(--accent); text-decoration: underline; }
 
 .note {
-  font-size: 12px;
+  font-size: 11.5px;
   color: #6a7288;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 footer {
