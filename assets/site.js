@@ -52,20 +52,22 @@
   }
 
   function card(a) {
-    var c = el('article', 'app');
+    var c = el('article', 'card');
 
     if (a.screenshot) {
+      var media = el('div', 'card-media');
       var img = el('img', 'shot');
       img.src = a.screenshot;
       img.alt = a.name;
       img.loading = 'lazy';
-      c.appendChild(img);
+      media.appendChild(img);
+      c.appendChild(media);
     }
 
-    var body = el('div', 'body');
+    var body = el('div', 'card-body');
     body.appendChild(el('h2', 'app-name', a.name));
-    if (a.tagline) body.appendChild(el('p', 'app-desc', a.tagline));
-    if (a.description) body.appendChild(el('p', 'app-desc', a.description));
+    if (a.tagline) body.appendChild(el('p', 'tag', a.tagline));
+    if (a.description) body.appendChild(el('p', 'desc', a.description));
 
     var meta = el('div', 'meta');
     if (a.version) meta.appendChild(el('span', 'chip accent', 'v' + a.version));
@@ -77,33 +79,32 @@
 
     var act = el('div', 'actions');
     if (a.download) {
-      var dl = el('a', 'btn btn-dl', a.downloadLabel || 'Скачать');
+      var dl = el('a', 'btn btn-primary', a.downloadLabel || 'Скачать');
       dl.href = a.download;
       dl.rel = 'noopener';
       act.appendChild(dl);
     }
+    if (a.downloadZip) {
+      var zip = el('a', 'btn btn-outline', a.downloadZipLabel || 'ZIP-версия');
+      zip.href = a.downloadZip;
+      zip.rel = 'noopener';
+      act.appendChild(zip);
+    }
     if (a.source) {
-      var src = el('a', 'btn btn-src', 'Исходный код');
+      var src = el('a', 'btn btn-outline', 'Исходный код');
       src.href = a.source;
       src.rel = 'noopener';
       act.appendChild(src);
     }
     body.appendChild(act);
 
-    // дополнительные ссылки: zip и страница релиза со списком файлов
-    var subs = [];
-    if (a.downloadZip) subs.push([a.downloadZip, a.downloadZipLabel || 'ZIP-архив']);
-    if (a.releasePage) subs.push([a.releasePage, 'Все файлы релиза']);
-    if (subs.length) {
-      var row = el('div', 'sublinks');
-      subs.forEach(function (pair, i) {
-        if (i) row.appendChild(el('span', 'dot', '·'));
-        var a2 = el('a', null, pair[1]);
-        a2.href = pair[0];
-        a2.rel = 'noopener';
-        row.appendChild(a2);
-      });
-      body.appendChild(row);
+    if (a.releasePage) {
+      var more = el('p', 'morelink');
+      var lnk = el('a', null, 'Что нового — все файлы релиза');
+      lnk.href = a.releasePage;
+      lnk.rel = 'noopener';
+      more.appendChild(lnk);
+      body.appendChild(more);
     }
 
     if (a.requiresAdmin) body.appendChild(el('p', 'note', a.requiresAdmin));
