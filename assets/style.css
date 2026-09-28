@@ -89,31 +89,29 @@ h1 span { color: var(--accent); }
 
 /* карточка софта */
 .card {
-  display: grid;
-  grid-template-columns: minmax(280px, 400px) 1fr;
-  gap: 26px;
-  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
   margin: 0 auto;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 24px;
-  align-items: stretch;
+  overflow: hidden;
   transition: .18s;
 }
 .card:hover { border-color: var(--accent); transform: translateY(-3px); }
 
-.card-media { display: flex; }
+.card-media { display: block; }
 
 .shot {
+  display: block;
   width: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid var(--line);
+  height: auto;
   background: var(--bg2);
+  border-bottom: 1px solid var(--line);
 }
 
-.card-body { display: flex; flex-direction: column; }
+.card-body { display: flex; flex-direction: column; padding: 18px; }
 
 .app-name { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
 
@@ -172,11 +170,6 @@ h1 span { color: var(--accent); }
   font-size: 12px;
   color: #6a7288;
   margin-top: 12px;
-}
-
-@media (max-width: 820px) {
-  .card { grid-template-columns: 1fr; }
-  .card-media { flex: none; }
 }
 
 footer {

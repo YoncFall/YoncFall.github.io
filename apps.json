@@ -16,18 +16,14 @@
         {
           "slug": "vpn-launcher",
           "name": "VPN LAUNCHER BY @YoncFALL",
-          "tagline": "Графический клиент sing-box для Windows",
-          "description": "Установка в один клик: установщик проверяет компьютер и сам ставит всё, что нужно. Внутри — TUN-режим и системный прокси, исключения для игр и античитов, свой интерфейс без консоли.",
+          "tagline": "",
+          "description": "Простой VPN-клиент sing-box: TUN-режим, прокси, исключения для игр.",
           "version": "1.0.6",
           "license": "GPL-3.0",
           "platform": "Windows 10+ x64",
           "size": "26.5 MB",
-          "requiresAdmin": "Установка — без прав администратора. Режим «Весь трафик (TUN)» запросит их только при подключении.",
-          "tags": [
-            "sing-box",
-            "TUN",
-            "Свой интерфейс"
-          ],
+          "requiresAdmin": "Установка без прав администратора.",
+          "tags": [],
           "screenshot": "assets/vpn-launcher.png",
           "download": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest/download/VPN-LAUNCHER-Setup.exe",
           "downloadZip": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest/download/VPN-LAUNCHER.zip",
