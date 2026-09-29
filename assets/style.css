@@ -101,7 +101,27 @@ h1 span { color: var(--accent); }
 }
 .card:hover { border-color: var(--accent); transform: translateY(-3px); }
 
-.card-media { display: block; }
+.card-media { display: block; position: relative; }
+
+/* значок платформы поверх скриншота */
+.media-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  background: rgba(8, 11, 16, .84);
+  border: 1px solid rgba(0, 216, 255, .4);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  pointer-events: none;
+}
+.media-badge svg { width: 15px; height: 15px; fill: currentColor; display: block; }
 
 .shot {
   display: block;
@@ -115,7 +135,16 @@ h1 span { color: var(--accent); }
 
 .card-body { display: flex; flex-direction: column; padding: 15px 17px 16px; }
 
-.app-name { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+.app-name {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.app-name .p-icon { display: inline-flex; color: var(--accent); }
+.app-name .p-icon svg { width: 17px; height: 17px; fill: currentColor; display: block; }
 
 .tag { color: var(--dim); font-size: 14px; margin-bottom: 9px; }
 

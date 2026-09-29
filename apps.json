@@ -15,13 +15,14 @@
       "apps": [
         {
           "slug": "vpn-launcher",
-          "name": "VPN LAUNCHER BY @YoncFALL",
+          "name": "VPN LAUNCHER — WINDOWS",
           "tagline": "",
           "description": "Простой VPN-клиент sing-box: TUN-режим, прокси, исключения для игр. Всё встроено — ставится одним файлом, без администратора.",
           "version": "2.0.0",
           "license": "GPL-3.0",
           "platform": "Windows 10+ x64",
           "size": "70.1 MB",
+          "icon": "windows",
           "requiresAdmin": "Установка без прав администратора.",
           "tags": [],
           "screenshot": "assets/vpn-launcher.png?v=2.0.0",
@@ -41,6 +42,7 @@
           "license": "GPL-3.0",
           "platform": "Android 7.0+",
           "size": "62.5 MB",
+          "icon": "android",
           "requiresAdmin": "Разрешение VPN запрашивается системой при первом подключении.",
           "tags": [],
           "screenshot": "assets/vpn-launcher-android.png",

@@ -51,6 +51,26 @@
     cat.apps.forEach(function (a) { box.appendChild(card(a)); });
   }
 
+  // Значок платформы (SVG-инлайн): окна Microsoft или робот Android
+  function platformIcon(kind) {
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('aria-hidden', 'true');
+    if (kind === 'windows') {
+      ['M3 3h8.5v8.5H3z', 'M12.5 3H21v8.5h-8.5z', 'M3 12.5h8.5V21H3z', 'M12.5 12.5H21V21h-8.5z'].forEach(function (d) {
+        var p = document.createElementNS(ns, 'path');
+        p.setAttribute('d', d);
+        svg.appendChild(p);
+      });
+    } else {
+      var p = document.createElementNS(ns, 'path');
+      p.setAttribute('d', 'M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.46 11.46 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z');
+      svg.appendChild(p);
+    }
+    return svg;
+  }
+
   function card(a) {
     var c = el('article', 'card');
 
@@ -61,11 +81,24 @@
       img.alt = a.name;
       img.loading = 'lazy';
       media.appendChild(img);
+      if (a.icon) {
+        var badge = el('span', 'media-badge');
+        badge.appendChild(platformIcon(a.icon));
+        badge.appendChild(el('span', null, a.icon === 'windows' ? 'Windows' : 'Android'));
+        media.appendChild(badge);
+      }
       c.appendChild(media);
     }
 
     var body = el('div', 'card-body');
-    body.appendChild(el('h2', 'app-name', a.name));
+    var h2 = el('h2', 'app-name');
+    if (a.icon) {
+      var picon = el('span', 'p-icon');
+      picon.appendChild(platformIcon(a.icon));
+      h2.appendChild(picon);
+    }
+    h2.appendChild(document.createTextNode(a.name));
+    body.appendChild(h2);
     if (a.tagline) body.appendChild(el('p', 'tag', a.tagline));
     if (a.description) body.appendChild(el('p', 'desc', a.description));
 
