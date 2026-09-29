@@ -2,7 +2,7 @@
   "site": {
     "name": "YoncFALL",
     "tagline": "Софт для Windows и Android",
-    "description": "Открытый софт для Windows: VPN-лаунчер и утилиты.",
+    "description": "Открытый софт для Windows и Android: VPN-лаунчер и утилиты.",
     "links": {
       "github": "https://github.com/YoncFall",
       "telegram": ""
@@ -31,6 +31,25 @@
           "downloadZipLabel": "ZIP-версия",
           "releasePage": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest",
           "source": "https://github.com/YoncFall/VPN-LAUNCHER"
+        },
+        {
+          "slug": "vpn-launcher-android",
+          "name": "VPN LAUNCHER — ANDROID",
+          "tagline": "",
+          "description": "Тот же VPN-клиент для телефона: подписки sing-box, TUN и системный прокси, исключения для игр.",
+          "version": "2.0.0",
+          "license": "GPL-3.0",
+          "platform": "Android 7.0+",
+          "size": "62.5 MB",
+          "requiresAdmin": "Разрешение VPN запрашивается системой при первом подключении.",
+          "tags": [],
+          "screenshot": "assets/vpn-launcher-android.png",
+          "download": "https://github.com/YoncFall/VPN-LAUNCHER-Android/releases/latest/download/VPN-LAUNCHER.apk",
+          "downloadZip": "https://github.com/YoncFall/VPN-LAUNCHER-Android/releases/latest/download/VPN-LAUNCHER-arm64-v8a.apk",
+          "downloadLabel": "Скачать APK",
+          "downloadZipLabel": "arm64-v8a (33.5 MB)",
+          "releasePage": "https://github.com/YoncFall/VPN-LAUNCHER-Android/releases/latest",
+          "source": "https://github.com/YoncFall/VPN-LAUNCHER-Android"
         }
       ]
     }
