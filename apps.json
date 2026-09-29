@@ -24,7 +24,7 @@
           "size": "70.1 MB",
           "requiresAdmin": "Установка без прав администратора.",
           "tags": [],
-          "screenshot": "assets/vpn-launcher.png",
+          "screenshot": "assets/vpn-launcher.png?v=2.0.0",
           "download": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest/download/VPN-LAUNCHER-Setup.exe",
           "downloadZip": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest/download/VPN-LAUNCHER.zip",
           "downloadLabel": "Скачать установщик",
