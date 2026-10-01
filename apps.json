@@ -23,7 +23,7 @@
           "platform": "Windows 10+ x64",
           "size": "71.4 MB",
           "icon": "windows",
-          "requiresAdmin": "Установка без прав администратора.",
+          "requiresAdmin": "Установка без прав администратора. Если Windows показывает предупреждение SmartScreen, exe без подписи: нажмите «Подробнее» → «Всё равно запустить».",
           "tags": [],
           "screenshot": "assets/vpn-launcher.png?v=2.0.2",
           "download": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest/download/VPN-LAUNCHER-Setup.exe",
