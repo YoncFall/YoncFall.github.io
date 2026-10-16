@@ -38,7 +38,7 @@
           "name": "VPN LAUNCHER — ANDROID",
           "tagline": "",
           "description": "Тот же VPN-клиент для телефона: подписки sing-box, TUN-режим, пинг серверов, исключения для приложений.",
-          "version": "2.1.1",
+          "version": "2.1.0",
           "license": "GPL-3.0",
           "platform": "Android 7.0+",
           "size": "59.7 MB",
