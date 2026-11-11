@@ -31,7 +31,8 @@
           "downloadLabel": "Скачать установщик",
           "downloadZipLabel": "ZIP-версия",
           "releasePage": "https://github.com/YoncFall/VPN-LAUNCHER/releases/latest",
-          "source": "https://github.com/YoncFall/VPN-LAUNCHER"
+          "source": "https://github.com/YoncFall/VPN-LAUNCHER",
+          "diagnosticsUrl": "https://yonca.tailca104c.ts.net/report"
         },
         {
           "slug": "vpn-launcher-android",
